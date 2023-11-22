@@ -1,0 +1,128 @@
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.card-main {
+    width: 70%;
+    position: absolute;
+    top: 50px;
+    right: 35px;
+    height: 90%;
+    backdrop-filter: blur(19px) saturate(150%);
+    background-color: rgba(224, 224, 224, 0.295);
+    border-radius: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    background-size: 100%;
+    box-shadow: 0px 14px 30px -7px rgba(0, 0, 0, 0.75);
+}
+
+.card-panel {
+    width: 25%;
+    position: absolute;
+    top: 50px;
+    height: 90%;
+    backdrop-filter: blur(19px) saturate(150%);
+    background-color: rgba(224, 224, 224, 0.295);
+    border-radius: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    background-size: 100%;
+    left: 40px;
+    box-shadow: 0px 14px 30px -7px rgba(0, 0, 0, 0.75);
+}
+
+.control-panel-logo {
+    width: 170px;
+}
+
+.divider {
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.control-panel-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 65px
+}
+
+.menu-container {
+    display: flex;
+    right: 130px;
+    flex-direction: column;
+    position: relative;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.menu-title {
+    position: relative;
+    margin: 15px;
+    right: 30px;
+    font-weight: 900;
+}
+
+.list-element {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    gap: 1rem;
+}
+
+.song-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.player {
+    display: flex;
+    gap: 6vh;
+    padding-bottom: 2vh;
+}
+
+.song-thumbnail {
+    height: 200px;
+    width: 200px;
+    margin-top: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 30px 0px rgba(0, 0, 0, 0.25);
+}
+
+.player-icons {
+    gap: 2vh;
+    display: flex;
+    padding-bottom: 2vh;
+    transform: perspective(500px) rotateX(325deg) translateY(-20%);
+}
+
+.song-duration {
+    cursor: pointer;
+}
+
+.icon {
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.icon:hover {
+    color: #0099ff;
+    transition: color 0.2s;
+}
+
+.list-text {
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.list-text:hover {
+    color: #0099ff;
+    transition: color 0.2s;
+}
+
+.song-title {
+    font-weight: 900;
+}

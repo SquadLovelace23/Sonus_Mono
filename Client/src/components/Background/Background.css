@@ -1,0 +1,6 @@
+.background {
+    background: url(../../assets/img/desktop-light.jpg) center center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}

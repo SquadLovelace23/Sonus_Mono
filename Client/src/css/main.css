@@ -1,0 +1,74 @@
+/* RESET */
+a,
+button,
+input,
+select,
+h1,
+h2,
+h3,
+h4,
+h5,
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    appearance: none;
+    background: none;
+    font-family: 'SF Pro';
+    scroll-behavior: smooth;
+    list-style: none;
+}
+
+
+/* FONTS */
+@font-face {
+    font-family: 'SF Pro';
+    src: url('/src/assets/fonts/sfpro.woff2') format('woff2'),
+        url('/src/assets/fonts/sfpro.woff') format('woff');
+    font-display: swap;
+}
+
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+    width: 0.6rem;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 6, 8, 0.878);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(46, 46, 46, 0.878);
+    border-radius: 0.3rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(53, 53, 53, 0.878);
+}
+
+
+@keyframes anim {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* LOADING */
+.loading {
+    animation: anim 2s ease 50 normal forwards;
+    justify-content: center;
+    display: flex;
+    margin-top: 20%;
+    position: absolute;
+}
