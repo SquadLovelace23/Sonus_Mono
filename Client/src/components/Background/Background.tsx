@@ -1,10 +1,11 @@
+import { useDarkModeContext } from "../../context/DarkMode";
 import "./Background.css"
 
-type Props = {}
+const Background = () => {
+    const { getClassName } = useDarkModeContext();
 
-const Background = (props: Props) => {
     return (
-        <div className="background"></div>
+        <div className={getClassName("background")}></div>
     )
 }
 

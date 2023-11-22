@@ -1,15 +1,33 @@
+/* LOGIN */
 .img {
     width: 120px;
 }
 
 .img-sonus {
-    width: 400px;
+    width: 300px;
+    height: 100px;
+    background: url(https://res.cloudinary.com/du94mex28/image/upload/v1697795732/sonus/sonus-full-fa2_j4vaxr.png) no-repeat;
+    background-size: contain;
+}
+
+.img-sonus-dark {
+    width: 300px;
+    height: 100px;
+    background: url(https://res.cloudinary.com/du94mex28/image/upload/v1697795732/sonus/sonus-full-white-fa2_uyyc1c.png) no-repeat;
+    background-size: contain;
 }
 
 .text {
     font-size: 40px;
     position: relative;
     left: 30px;
+}
+
+.text-dark{
+    font-size: 40px;
+    position: relative;
+    left: 30px;
+    color: var(--clr-white);
 }
 
 .card {
@@ -22,7 +40,7 @@
     border-radius: 40px;
     border: 1px solid rgba(255, 255, 255, 0.125);
     background-size: 100%;
-    box-shadow: 0px 14px 30px -7px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 14px 30px -7px rgba(0,0,0,0.75);
 }
 
 .container-card {
@@ -42,9 +60,18 @@
     left: 50px;
     top: 30px;
     cursor: pointer;
+    display: flex;
 }
 
-.corner-items {
+.corner-logo-img {
+    position: relative;
+    left: 50px;
+    top: 30px;
+    cursor: pointer;
+    display: flex;
+}
+
+.corner-items{
     display: flex;
     justify-content: space-between;
 }
@@ -52,18 +79,48 @@
 .corner-img {
     width: 50px;
     height: 43px;
+    background-image: url(https://res.cloudinary.com/du94mex28/image/upload/v1697795732/sonus/logo_okaldw.png);
+    background-size: contain;
+}
+
+.corner-img-dark {
+    width: 50px;
+    height: 43px;
+    background-image: url(https://res.cloudinary.com/du94mex28/image/upload/v1697795732/sonus/logo-white_i0egzm.png);
+    background-size: contain;
 }
 
 .corner-user-container {
+    gap: 1rem;
     position: relative;
     right: 50px;
     top: 30px;
+    display: flex;
     cursor: pointer;
+    align-items: center;
+}
+
+.corner-user {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 50px;
+    border-radius: 50%;
+    height: 50px;
 }
 
 .corner-img-sonus {
     width: 130px;
     height: 45px;
+    background: url(https://res.cloudinary.com/du94mex28/image/upload/v1697795732/sonus/sonus-full-fa2_j4vaxr.png);
+    background-size: contain;
+}
+
+.corner-img-sonus-dark {
+    width: 130px;
+    height: 45px;
+    background: url(https://res.cloudinary.com/du94mex28/image/upload/v1697795732/sonus/sonus-full-white-fa2_uyyc1c.png);
+    background-size: contain;
 }
 
 .form {
@@ -76,7 +133,7 @@
 
 .form .input {
     width: 100%;
-    background: white;
+    background: var(--clr-white);
     border: none;
     padding: 15px 20px;
     border-radius: 20px;
@@ -92,16 +149,30 @@
     transition: border-inline 0.2s;
 }
 
-.form .forgot-password {
+.form .sign-up {
     display: flex;
     gap: 10px;
     align-items: baseline;
     justify-content: center;
     font-size: 16px;
 }
+  
+.form .sign-up a {
+    color: var(--primary-blue);
+    text-decoration: none;
+}
 
-.form .forgot-password a {
-    color: #0099ff;
+.form .sign-up-dark {
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+    justify-content: center;
+    font-size: 16px;
+    color: var(--clr-white);
+}
+
+.form .sign-up-dark a {
+    color: var(--primary-blue);
     text-decoration: none;
 }
 
@@ -111,7 +182,7 @@
     cursor: pointer;
     font-weight: bold;
     background: linear-gradient(45deg, rgb(7, 7, 7) 0%, rgb(39, 39, 39) 100%);
-    color: white;
+    color: var(--clr-white);
     padding-block: 15px;
     margin: 20px auto;
     border-radius: 20px;
@@ -119,12 +190,12 @@
     border: none;
     transition: all 0.2s ease-in-out;
 }
-
+  
 .form .login-button:hover {
     transform: scale(1.03);
     box-shadow: #12B1D1 0px 23px 10px -20px;
 }
-
+  
 .form .login-button:active {
     transform: scale(0.95);
     box-shadow: rgba(9, 106, 148, 0.878) 0px 15px 10px -10px;
@@ -136,18 +207,18 @@
     gap: 10px;
     align-items: center;
 }
-
+  
 .container input {
     display: none;
 }
-
+  
 .container svg {
     overflow: visible;
 }
-
+  
 .path {
     fill: none;
-    stroke: rgb(0, 0, 0);
+    stroke: var(--clr-black);
     stroke-width: 6;
     stroke-linecap: round;
     stroke-linejoin: round;
@@ -156,10 +227,26 @@
     stroke-dashoffset: 0;
 }
 
-.container input:checked~svg .path {
+.path-dark {
+    fill: none;
+    stroke: var(--clr-white);
+    stroke-width: 6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: stroke-dasharray 0.5s ease, stroke-dashoffset 0.5s ease;
+    stroke-dasharray: 241 9999999;
+    stroke-dashoffset: 0;
+}
+  
+.container input:checked ~ svg .path {
     stroke-dasharray: 70.5096664428711 9999999;
     stroke-dashoffset: -262.2723388671875;
-}
+}  
+
+.container input:checked ~ svg .path-dark {
+    stroke-dasharray: 70.5096664428711 9999999;
+    stroke-dashoffset: -262.2723388671875;
+}  
 
 .container-check {
     display: flex;
@@ -177,26 +264,30 @@
 }
 
 
-
 @media screen and (max-width: 450px) {
     .log-in-sonus {
         margin-left: 10px;
     }
-
     .img-sonus {
         width: 160px;
+        height: 55px;
     }
-
+    .img-sonus-dark {
+        width: 160px;
+        height: 55px;
+    }
     .text {
         font-size: 20px;
         left: 10px;
     }
-
+    .text-dark {
+        font-size: 20px;
+        left: 10px;
+    }
     .corner-logo {
-        left: 85px;
+        left: 80px;
         top: 50px;
     }
-
     .form {
         width: 70%;
         position: relative;

@@ -1,8 +1,4 @@
-import React from 'react'
-
-type Props = {}
-
-const MainCard = (props: Props) => {
+const MainCard = () => {
     return (
         <div>MainCard</div>
     )

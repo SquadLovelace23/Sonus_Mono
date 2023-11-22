@@ -1,8 +1,4 @@
-import React from 'react'
-
-type Props = {}
-
-const CardContainer = (props: Props) => {
+const CardContainer = () => {
     return (
         <div>CardContainer</div>
     )

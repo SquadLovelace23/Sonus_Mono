@@ -1,6 +1,15 @@
 .background {
-    background: url(../../assets/img/desktop-light.jpg) center center;
+    background: url(https://res.cloudinary.com/du94mex28/image/upload/v1698216974/sonus/1178257_quifgg.jpg) center center;
     position: fixed;
     width: 100%;
     height: 100%;
+    transition: background 0.2s;
+}
+
+.background-dark {
+    background: url(https://res.cloudinary.com/du94mex28/image/upload/v1697795674/sonus/1178258_tkjary.jpg) center center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    transition: background 0.2s;
 }

@@ -1,8 +1,4 @@
-import React from 'react'
-
-type Props = {}
-
-const Searchbar = (props: Props) => {
+const Searchbar = () => {
     return (
         <div>Searchbar</div>
     )

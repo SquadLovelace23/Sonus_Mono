@@ -1,10 +1,19 @@
-import React from 'react'
+import ProfileInfo from '../../components/ProfileInfo/ProfileInfo'
+import Sidebar from '../../components/Sidebar/Sidebar'
+import "./Profile.css"
 
-type Props = {}
-
-const Profile = (props: Props) => {
+const Profile = () => {
     return (
-        <div>Profile</div>
+        <>
+
+            <Sidebar />
+
+
+            <ProfileInfo />
+
+        </>
+
+
     )
 }
 

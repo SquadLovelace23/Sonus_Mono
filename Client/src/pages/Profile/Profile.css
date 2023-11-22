@@ -1,0 +1,122 @@
+.user {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 5rem;
+}
+
+.user-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hover-cam{
+    display: none;
+    width: 180px;
+    height: 180px;
+    padding: 10px;
+    background: cover;
+}
+
+.name-user {
+    font-size: var(--fs-max);
+}
+
+.email-user {
+    font-size: var(--fs-2);
+}
+
+.name-user-dark {
+    font-size: 50px;
+    color: white;
+}
+
+.email-user-dark {
+    font-size: var(--fs-2);
+    color: white;
+}
+
+.user-details {
+    gap: 1rem;
+    display: flex;
+    margin-top: 2rem;
+    flex-direction: column;
+}
+
+.edit-profile-btn {
+    display: block;
+    width: 120px;
+    cursor: pointer;
+    font-weight: bold;
+    background: linear-gradient(45deg, rgb(7, 7, 7) 0%, rgb(39, 39, 39) 100%);
+    color: var(--clr-white);
+    padding-block: 15px;
+    margin: 20px auto;
+    border-radius: 20px;
+    box-shadow: rgba(35, 60, 71, 0.878) 0px 20px 10px -15px;
+    border: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.edit-profile-btn:hover {
+    transform: scale(1.03);
+    box-shadow: #12B1D1 0px 23px 10px -20px;
+}
+
+.edit-profile-btn:active {
+    transform: scale(0.95);
+    box-shadow: rgba(9, 106, 148, 0.878) 0px 15px 10px -10px;
+}
+
+.camera-container {
+    cursor: pointer;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.icon-tabler-camera-plus {
+    padding: 0.5rem;
+    height: 100px;
+    width: 100px;
+    opacity: 0.6;
+}
+
+.camera-container:hover {
+    opacity: 1;
+}
+
+.img-input {
+    position: absolute;
+    width: 135px;
+    z-index: 1;
+    opacity: 0;
+    cursor: pointer;
+    padding: 5.5rem 2rem;
+    font-size: 0;
+}
+
+@media screen and (max-width: 450px) {
+    .user {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .user-details {
+        margin-top: 0;
+        gap: 0;
+    }
+}

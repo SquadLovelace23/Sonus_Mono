@@ -1,10 +1,10 @@
 import "./Landing.css"
 import LoginForm from "../../components/LoginForm/LoginForm"
 import { Helmet } from 'react-helmet-async';
+import { useDarkModeContext } from "../../context/DarkMode";
 
-type Props = {}
-
-const Landing = (props: Props) => {
+const Landing = () => {
+    const { getClassName } = useDarkModeContext()
 
     return (
 
@@ -22,14 +22,14 @@ const Landing = (props: Props) => {
 
                 <div className="card">
                     <div className="corner-logo">
-                        <img className="corner-img" src="./src/assets/img/icons/logo.png" />
-                        <img className="corner-img-sonus" src="./src/assets/img/icons/sonus-full-fa2.png" />
+                        <div className={getClassName("corner-img")} />
+                        <div className={getClassName("corner-img-sonus")} />
                     </div>
 
                     <div className="container-content">
                         <div className="log-in-sonus">
-                            <p className="text">Welcome to</p>
-                            <img className="img-sonus" src="./src/assets/img/icons/sonus-full-fa2.png" />
+                            <p className={getClassName("text")}>Welcome to</p>
+                            <div className={getClassName("img-sonus")} />
                         </div>
 
                         <LoginForm />

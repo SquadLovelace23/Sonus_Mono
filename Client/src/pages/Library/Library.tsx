@@ -1,8 +1,4 @@
-import React from 'react'
-
-type Props = {}
-
-const Library = (props: Props) => {
+const Library = () => {
     return (
         <div>Library</div>
     )
