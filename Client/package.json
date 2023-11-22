@@ -11,6 +11,7 @@
     "server": "json-server --watch ./src/assets/db/db.json"
   },
   "dependencies": {
+    "auth0": "^4.1.0",
     "json-server": "^0.17.4",
     "react": "^18.2.0",
     "react-audio-player": "^0.17.0",
